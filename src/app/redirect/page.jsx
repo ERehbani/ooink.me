@@ -34,8 +34,8 @@ function Redirect({ searchParams }) {
       if (!webLink.startsWith('http://') && !webLink.startsWith('https://')) {
         webLink = 'http://' + webLink;
       }
-      window.open(webLink, '_blank');
-      router.push('/');
+      window.open(webLink);
+      router.push('/')
     } else if (seconds > 0) {
       const timerId = setTimeout(() => {
         setSeconds(seconds - 1);

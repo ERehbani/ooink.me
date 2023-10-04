@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@prisma/client": "^5.3.1",
+    "axios": "^1.5.1",
     "formik": "^2.4.5",
     "next": "latest",
+    "node-fetch": "^2.6.1",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "latest",
     "react-dom": "latest",
     "react-hot-toast": "^2.4.1",

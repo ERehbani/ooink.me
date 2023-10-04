@@ -29,7 +29,7 @@ function Done({searchParams}) {
           <h2 className='text-base text-[#8DA3AF] mb-3'>Your TKTK Code is</h2>
 
           <div>
-            <input type="text" value={code}  className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"/>
+            <input type="text" value={code} className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"/>
           </div>
 
           <div>

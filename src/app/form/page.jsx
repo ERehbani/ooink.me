@@ -5,6 +5,8 @@ import Image from 'next/image'
 import React from 'react'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 function Form() {
 
@@ -16,20 +18,7 @@ function Form() {
     },
     validationSchema: Yup.object({
       webLink: Yup.string()
-      .required("The URL is required.")
-      .matches(
-        /^(http:\/\/|https:\/\/|www\.).*/,
-      "It must start with 'http://,' 'https://,' or 'www.'"
-      ) .test('len', 'It must be longer than its prefix.', function(val) {
-        if (val.startsWith('www.')) {
-          return val.length > 5;
-        } else if (val.startsWith('http://')) {
-          return val.length > 8;
-        } else if (val.startsWith('https://')) {
-          return val.length > 9;
-        }
-        return true;
-      }),
+      .required("The URL is required."),
       userName: Yup.string()
       .min(3, "Your name must contain more than 3 characters.")
       .max(15, "Your name must contain less than 15 characters.")
@@ -40,30 +29,88 @@ function Form() {
 
   const router = useRouter()
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const res = await fetch("/api", {
-      method: "POST",
-      body: JSON.stringify({
-        userName: formik.values.userName,
-        webLink: formik.values.webLink,
-        urlProfile: formik.values.urlProfile
-      }),
-      headers: {
-        "Content-Type" : "application/json"
-      }
-    })
-    if (res.ok) {
-      const data = await res.json();
-      console.log(data);
-      router.push(`/done?params=${data.code}`)
+    try {
+      // Realiza una solicitud GET para verificar la existencia del enlace
+      const getResponse = (formik.values.webLink)
       
-    } else {
-      console.error("Error creating task:", res.statusText);
+      // Verifica si la respuesta tiene un código de estado 200 y contenido válido
+      if (isValidContent(getResponse)) {
+        console.log('El enlace es válido y existe');
+        const res = await fetch("/api", {
+          method: "POST",
+          body: JSON.stringify({
+            userName: formik.values.userName,
+            webLink: formik.values.webLink,
+            urlProfile: formik.values.urlProfile
+          }),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+  
+        if (res.ok) {
+          const data = await res.json();
+          console.log(data);
+          router.push(`/done?params=${data.code}`);
+          toast.success('Codigo creado!')
+        } else {
+          console.error("Error creando tarea:", res.statusText);
+        }
+      } else {
+        toast.error("El enlace no es válido o no existe");
+      }
+    } catch (error) {
+      console.error(error);
     }
-    console.log(res)
-
+  };
+  
+  // Función para verificar si el contenido es válido (puedes personalizar esto según tus necesidades)
+  function isValidContent(content) {
+    const dominios = [
+      ".com",
+      ".net",
+      ".org",
+      "youtube.com",
+      ".xyz",
+      ".info",
+      ".io",
+      ".co",
+      ".edu",
+      ".gov",
+      ".tv",
+      ".biz",
+      ".mobi",
+      ".name",
+      ".pro",
+      ".travel",
+      ".aero",
+      ".coop",
+      ".museum",
+      ".asia",
+      ".jobs",
+      ".tel",
+      ".xxx",
+      ".int",
+      ".mil",
+      ".cat",
+      ".moe"
+    ];
+  
+    const forbiddenWords = ["spam", "inapropriate"];
+  
+    // Comprueba si el contenido contiene al menos uno de los dominios
+    const containsDomain = dominios.some(domain => content.includes(domain));
+  
+    // Comprueba si el contenido no contiene palabras prohibidas
+    const containsNoForbiddenWords = !forbiddenWords.some(word => content.includes(word));
+  
+    // Devuelve verdadero solo si todas las condiciones se cumplen
+    return containsDomain && containsNoForbiddenWords;
   }
+  
+  
 
 
 
@@ -117,6 +164,7 @@ function Form() {
     <Image src="/Subtract.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </button>
   )}
+    <Toaster position='top-center' reverseOrder={false}/>
 
 </form>
 </div>
