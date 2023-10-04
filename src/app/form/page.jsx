@@ -54,12 +54,11 @@ function Form() {
           const data = await res.json();
           console.log(data);
           router.push(`/done?params=${data.code}`);
-          toast.success('Codigo creado!')
         } else {
           console.error("Error creando tarea:", res.statusText);
         }
       } else {
-        toast.error("El enlace no es válido o no existe");
+        toast.error("The link is not valid or does not exist.");
       }
     } catch (error) {
       console.error(error);

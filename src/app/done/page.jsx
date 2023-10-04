@@ -1,17 +1,16 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
 
 function Done({searchParams}) {
   const code = searchParams.params
 
-
   const copyToClipboard = async(text) => {
     try {
       await navigator.clipboard.writeText(text)
-      toast.success('Copiado al portapapeles!')
+      toast.success('Copied to clipboard!')
     } catch (error) {
       console.log('Error al copiar el texto', error)
     }
@@ -19,7 +18,7 @@ function Done({searchParams}) {
 
   return (
     <div className='text-white flex items-center justify-center h-screen'>
-     <div>
+     <div className='w-full max-w-xs'>
      <div className='mb-7'>
         <h1 className='text-2xl font-bold'>Great Job!</h1>
       </div>

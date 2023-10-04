@@ -34,7 +34,7 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error parsing response as JSON:', error);
-      toast.error("El codigo ingresado no es válido");
+      toast.error("The code entered is not valid.");
     }
   };
   
@@ -47,7 +47,7 @@ export default function Home() {
       <div className="">
         <Image src="/ooink_logo.svg" alt="Imagen SVG" width={200} height={0} className="mx-auto mb-8"/>
         <div className="flex justify-center items-center mb-4">
-          <input value={linkCode} onChange={(e) => setLinkCode(e.target.value)} type="text" placeholder="Paste your code" className="py-4 px-4 rounded-l-lg focus:outline-none" maxLength="11" pattern="\d*"/>
+          <input value={linkCode} onChange={(e) => setLinkCode(e.target.value)} placeholder="Paste your code" className="py-4 px-4 rounded-l-lg focus:outline-none" maxLength="11" type='text'/>
           <button onClick={() => getLink()} className="bg-ooink py-4 px-4 rounded-r-lg text-white">
             <Image src="/search.svg" alt='search' width={24.077} height={0}/>
           </button>
