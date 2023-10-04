@@ -116,7 +116,7 @@ function Form() {
 
   return (
     <div className='flex items-center justify-center h-screen'>
-        <div className="w-full max-w-xs h-screen">
+        <div className="w-full max-w-xs">
 
       <Link href='/' className='flex justify-around w-[25%] mb-6'>
   <Image src="/back.svg" alt='back' width={20} height={0}/> 

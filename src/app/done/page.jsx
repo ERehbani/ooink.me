@@ -18,7 +18,7 @@ function Done({searchParams}) {
 
   return (
     <div className='text-white flex items-center justify-center h-screen'>
-     <div className='w-full max-w-xs h-screen'>
+     <div className='w-full max-w-xs'>
      <div className='mb-7'>
         <h1 className='text-2xl font-bold'>Great Job!</h1>
       </div>

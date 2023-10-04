@@ -44,7 +44,7 @@ export default function Home() {
   return (
    <div className='flex items-center justify-center h-screen'>
      <div className='flex justify-center items-center my-auto'>
-      <div className="h-screen">
+      <div className="w-full max-w-xs">
         <Image src="/ooink_logo.svg" alt="Imagen SVG" width={200} height={0} className="mx-auto mb-8"/>
         <div className="flex justify-center items-center mb-4">
           <input value={linkCode} onChange={(e) => setLinkCode(e.target.value)} placeholder="Paste your code" className="py-4 px-4 rounded-l-lg focus:outline-none" maxLength="11" type='text'/>
