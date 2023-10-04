@@ -71,6 +71,7 @@ function Form() {
       ".com",
       ".net",
       ".org",
+      "app",
       "youtube.com",
       ".xyz",
       ".info",
