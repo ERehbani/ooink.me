@@ -33,14 +33,14 @@ function Done({searchParams}) {
           </div>
 
           <div>
-          <button onClick={() => copyToClipboard(code)}  type="submit" className=" bg-rose-600 py-4 mt-8 px-4 rounded-lg text-white flex items-center justify-center w-full">
+          <button onClick={() => copyToClipboard(code)}  type="submit" className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
     <span>Copy to clipboard</span>
     <Image src="/copy.svg" alt='upload' width={17} height={0} className='ml-2'/>
   </button>
           </div>
           <div>
-          <Link href='/' className=" border border-rose-600 py-4 mt-8 px-4 rounded-lg text-white flex items-center justify-center w-full">
-    <span className='text-rose-600'>Go to home</span>
+          <Link href='/' className=" border border-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
+    <span className='text-ooink'>Go to home</span>
     <Image src="/home.svg" alt='upload' width={17} height={0} className='ml-2'/>
   </Link>
           </div>

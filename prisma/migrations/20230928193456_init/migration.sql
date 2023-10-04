@@ -1,8 +1,0 @@
--- CreateTable
-CREATE TABLE "Link" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "socialLink" TEXT NOT NULL,
-    "name" TEXT NOT NULL,
-    "code" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);

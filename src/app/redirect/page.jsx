@@ -47,9 +47,9 @@ function Redirect({ searchParams }) {
   return (
     <div className='text-white'>
       <div>
-        <div className='h-[123px] bg-[#FF004F] flex justify-center'>
+        <div className='h-[123px] bg-ooink flex justify-center'>
           <div className='mt-20'>
-            <b className='mr-1'>{data ? data.userName : ''}</b> shared this link
+            <b className='mr-1'>{data ? data.userName : ''}</b>shared this link
           </div>
         </div>
       </div>

@@ -16,11 +16,11 @@ function Form() {
     },
     validationSchema: Yup.object({
       webLink: Yup.string()
-      .required("El link del video es obligatorio")
+      .required("The URL is required.")
       .matches(
         /^(http:\/\/|https:\/\/|www\.).*/,
-      "Debe comenzar con 'http://', 'https://' o 'www.'"
-      ) .test('len', 'Debe ser más largo que su prefijo', function(val) {
+      "It must start with 'http://,' 'https://,' or 'www.'"
+      ) .test('len', 'It must be longer than its prefix.', function(val) {
         if (val.startsWith('www.')) {
           return val.length > 5;
         } else if (val.startsWith('http://')) {
@@ -31,9 +31,9 @@ function Form() {
         return true;
       }),
       userName: Yup.string()
-      .min(3, "El nombre debe contener mas de 3 caracteres")
-      .max(15, "El nombre no debe superar los 15 caracteres")
-      .required("El nombre es obligatorio")
+      .min(3, "Your name must contain more than 3 characters.")
+      .max(15, "Your name must contain less than 15 characters.")
+      .required("Your name is required.")
     }),
 
   })
@@ -74,9 +74,9 @@ function Form() {
 
       <Link href='/' className='flex justify-around w-[25%] mb-6'>
   <Image src="/back.svg" alt='back' width={20} height={0}/> 
-  <p className='text-rose-600'>Back</p>
+  <p className='text-ooink'>Back</p>
 </Link>
-<h1 className="text-4xl mb-8 text-white text-left font-bold">New TKTK Code</h1>
+<h1 className="text-4xl mb-8 text-white text-left font-bold">New OOINK Code</h1>
 
 <form onSubmit={handleSubmit}>
   <label htmlFor="link" className="text-white mb-2 font-light flex">Link for share<p className='text-red-600 ml-2'>*</p></label>
@@ -107,14 +107,14 @@ function Form() {
   { (formik.touched.urlProfile && formik.errors.urlProfile) || (formik.touched.webLink && formik.errors.webLink) || (formik.touched.userName && formik.errors.userName) || (!formik.values.webLink.length || !formik.values.userName) ? (
     <div>
        <div className=" bg-slate-900 py-4 mt-8 px-4 rounded-lg text-white flex items-center justify-center w-full">
-    <Image src="/upload2.svg" alt='upload' width={20} height={0} className='mr-2'/>
     Generate code
+    <Image src="/upload-disabled.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </div>
     </div>
   ) : (
-    <button  type="submit" className=" bg-rose-600 py-4 mt-8 px-4 rounded-lg text-white flex items-center justify-center w-full">
-    <Image src="/upload2.svg" alt='upload' width={20} height={0} className='mr-2'/>
+    <button  type="submit" className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
     <span>Generate code</span>
+    <Image src="/Subtract.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </button>
   )}
 
