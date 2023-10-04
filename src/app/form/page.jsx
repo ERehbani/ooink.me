@@ -116,7 +116,7 @@ function Form() {
 
   return (
     <div className='flex items-center justify-center h-screen'>
-        <div className="w-full max-w-xs">
+        <div className="w-full max-w-xs h-screen">
 
       <Link href='/' className='flex justify-around w-[25%] mb-6'>
   <Image src="/back.svg" alt='back' width={20} height={0}/> 
@@ -163,10 +163,10 @@ function Form() {
     <Image src="/Subtract.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </button>
   )}
-    <Toaster position='top-center' reverseOrder={false}/>
 
 </form>
 </div>
+    <Toaster position='top-center' reverseOrder={false}/>
     </div>
   )
 }
