@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
@@ -48,14 +49,27 @@ function Redirect({ searchParams }) {
     <div className='text-white'>
       <div>
         <div className='h-[123px] bg-ooink flex justify-center'>
-          <div className='mt-20'>
-            <b className='mr-1'>{data ? data.userName : ''}</b>shared this link
+          <div className='mt-20 text-black'>
+            <b className='mr-1 '>{data ? data.userName : ''}</b>shared this link
           </div>
         </div>
       </div>
 
       <div>
         <h2 className='text-2xl font-normal flex justify-center mt-32'>Redirecting in {seconds} seconds...</h2>
+      </div>
+      
+      <div className='border border-dotted max-w-xs flex mx-auto my-20 h-56'>
+
+      </div>
+
+      <div className='w-full max-w-xs flex mx-auto my-0'>
+        <div className='flex border border-gray-border-ooink bg-gray-dark-ooink rounded-lg'>
+        <Image src='/screen.svg' alt='screen' width={20} height={0} className='mx-6'/>
+        <div>
+        <h2 className='text-base text-gray-ooink pt-6 pb-6 pr-6 tracking-wide'>Make sure to allow link pop-ups in your browser.</h2>
+        </div>
+        </div>
       </div>
     </div>
   )

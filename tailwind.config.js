@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         'ooink': '#FF78A9',
-        'gray-ooink': '#8DA3AF'
+        'gray-ooink': '#8DA3AF',
+        'gray-dark-ooink': '#1D1D1D',
+        'gray-border-ooink': '#474747'
       }
     },
   },

@@ -32,7 +32,7 @@ export async function POST(req) {
     const generateCode = () => {
         while (1) {
             let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            let code = "🐽/";
+            let code = "🐽:";
         
             for (var i = 0; i < 6; i++) {
               var randomIndex = Math.floor(Math.random() * characters.length);

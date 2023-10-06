@@ -38,7 +38,7 @@ function Done({searchParams}) {
   </button>
           </div>
           <div>
-          <Link href='/' className=" border border-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
+          <Link href='/' className=" border border-ooink py-4 mt-4 px-4 rounded-lg text-black flex items-center justify-center w-full">
     <span className='text-ooink'>Go to home</span>
     <Image src="/home.svg" alt='upload' width={17} height={0} className='ml-2'/>
   </Link>
