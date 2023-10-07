@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </head>
       <body className={inter.className}>
+        <div className='flex-grow'>
         {children}
+        </div>
         <Footer/>
         <Analytics/>
       </body>
