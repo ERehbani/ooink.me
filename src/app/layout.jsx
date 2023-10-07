@@ -19,9 +19,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </head>
       <body className={inter.className}>
-        <div className='border border-red-600'>
         {children}
-        </div>
         <Footer/>
         <Analytics/>
       </body>
