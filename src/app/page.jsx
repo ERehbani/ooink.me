@@ -49,7 +49,7 @@ export default function Home() {
         <div className="flex justify-center items-center mb-4">
           <input value={linkCode} onChange={(e) => setLinkCode(e.target.value)} placeholder="Paste your code" className="py-4 px-4 rounded-l-lg focus:outline-none" maxLength="11" type='text'/>
           <button onClick={() => getLink()} className="bg-ooink py-4 px-4 rounded-r-lg text-white">
-            <Image src="/search.svg" alt='search' width={24.077} height={0}/>
+          <Image src="/search.svg" alt='search' width={24.077} height={0} style={{minWidth: '24.077px'}}/>
           </button>
         </div>
         <div className="flex justify-center items-center">
