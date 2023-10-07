@@ -55,11 +55,12 @@ function Redirect({ searchParams }) {
         </div>
       </div>
 
-      <div>
-        <h2 className='text-2xl font-normal flex justify-center mt-32'>Redirecting in {seconds} seconds...</h2>
+     <div className='max-md:max-h-20'>
+     <div>
+        <h2 className='text-2xl font-normal flex justify-center mt-32 max-md:mt-16'>Redirecting in {seconds} seconds...</h2>
       </div>
       
-      <div className='border border-dotted max-w-xs flex mx-auto my-20 h-56'>
+      <div className='border border-dotted max-w-xs flex mx-auto my-20 h-56 max-md:my-10'>
 
       </div>
 
@@ -71,6 +72,7 @@ function Redirect({ searchParams }) {
         </div>
         </div>
       </div>
+     </div>
     </div>
   )
 }
