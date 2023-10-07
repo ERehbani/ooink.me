@@ -29,35 +29,35 @@ function Redirect({ searchParams }) {
     getData();
   }, [code]);
 
-  useEffect(() => {
-    if (seconds === 0 && data) {
-      let webLink = data.webLink;
-      if (!webLink.startsWith('http://') && !webLink.startsWith('https://')) {
-        webLink = 'http://' + webLink;
-      }
-      window.open(webLink);
-      router.push('/')
-    } else if (seconds > 0) {
-      const timerId = setTimeout(() => {
-        setSeconds(seconds - 1);
-      }, 1000);
-      return () => clearTimeout(timerId);
-    }
-  }, [seconds, data, router]);
+  // useEffect(() => {
+  //   if (seconds === 0 && data) {
+  //     let webLink = data.webLink;
+  //     if (!webLink.startsWith('http://') && !webLink.startsWith('https://')) {
+  //       webLink = 'http://' + webLink;
+  //     }
+  //     window.open(webLink);
+  //     router.push('/')
+  //   } else if (seconds > 0) {
+  //     const timerId = setTimeout(() => {
+  //       setSeconds(seconds - 1);
+  //     }, 1000);
+  //     return () => clearTimeout(timerId);
+  //   }
+  // }, [seconds, data, router]);
 
   return (
     <div className='text-white'>
       <div>
         <div className='h-[61.5px] bg-ooink flex justify-center'>
-          <div className='mt-10 text-black'>
-            <b className='mr-1 '>{data ? data.userName : ''}</b>shared this link
+          <div className='my-5 text-black'>
+            <b className='mr-1'>{data ? data.userName : ''}</b>shared this link
           </div>
         </div>
       </div>
 
      <div className='max-md:max-h-20'>
      <div>
-        <h2 className='text-2xl font-normal flex justify-center mt-32 max-md:mt-16'>Redirecting in {seconds} seconds...</h2>
+        <h2 className='text-2xl font-normal flex justify-center mt-32 max-md:mt-10'>Redirecting in {seconds} seconds...</h2>
       </div>
       
       <div className='border border-dotted max-w-xs flex mx-auto my-20 h-56 max-md:my-10'>
