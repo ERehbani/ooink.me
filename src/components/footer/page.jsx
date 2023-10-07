@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div>
       <div>
-    <footer className="absolute bottom-0 z-20 w-full p-4 body border-t border-gray-ooink shadow flex items-center justify-between ">
+    <footer className="flex z-20 w-full p-4 body border-t border-gray-ooink shadow items-center justify-between ">
       <div className="text-sm text-gray-500 dark:text-gray-400">
         <span>© 2023 -</span>
         <a href="https://ooink.me/" className="hover:underline"> OOINK</a>
