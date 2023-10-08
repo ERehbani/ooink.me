@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
+import CircleBg from 'src/components/circle-bg/page'
 
 function Done({searchParams}) {
   const code = searchParams.params
@@ -18,6 +19,7 @@ function Done({searchParams}) {
 
   return (
     <div className='text-white flex items-center justify-center h-screen'>
+      <CircleBg/>
      <div className='w-full max-w-xs'>
      <div className='mb-7'>
         <h1 className='text-2xl font-bold'>Great Job!</h1>

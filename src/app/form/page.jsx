@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
+import CircleBg from 'src/components/circle-bg/page';
 
 function Form() {
 
@@ -118,6 +119,7 @@ function Form() {
 
   return (
     <div className='flex items-center justify-center h-screen'>
+      <CircleBg/>
         <div className="w-full max-w-xs">
 
       <Link href='/' className='flex justify-around w-[25%] mb-6'>
