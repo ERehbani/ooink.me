@@ -4,6 +4,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/react";
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,6 +17,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7210881069005858"
+     crossorigin="anonymous"></script>
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </head>
       <body className={inter.className}>
