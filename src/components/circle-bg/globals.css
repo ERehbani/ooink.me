@@ -1,28 +1,24 @@
 .circle-bg {
     position: absolute;
-    top: -300px;
-    width: 844px;
-    height: 422px;
-    background: #FF78A9;
+    top: -470px;
     border-radius: 100%;
-    opacity: 50%;
-    filter: blur(128px);
     z-index: -10;
-    left: 0; /* Añade esta línea */
-    right: 0; /* Añade esta línea */
-    margin-left: auto; /* Añade esta línea */
-    margin-right: auto; /* Añade esta línea */
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    filter: blur(123px);
 
     @media (max-width: 740px) {
-        position: absolute;
-        width: 270px;
-        height: 270px;
-        top: -170px;
-        filter: blur(128px);
-        opacity: 50%;
+        width: 650px;
         display: flex;
-        margin-left: auto; /* Añade esta línea */
-        margin-right: auto; /* Añade esta línea */
-        z-index: -10;
+        position: fixed;
+        justify-content: center;
+        content: url('../../../public/circleResponsive.svg');
+        top: -330px;
+        left: -125px;
+        filter: none;
     }
 }
