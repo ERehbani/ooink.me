@@ -14,11 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
       <meta name="google-adsense-account" content="ca-pub-8146840112267023"/>
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
+      </head>
       <body className={inter.className}>
         {children}
 
