@@ -157,7 +157,7 @@ function Form() {
   
   { (formik.touched.urlProfile && formik.errors.urlProfile) || (formik.touched.webLink && formik.errors.webLink) || (formik.touched.userName && formik.errors.userName) || (!formik.values.webLink.length || !formik.values.userName) ? (
     <div>
-       <div className=" bg-black-ooink py-4 mt-8 px-4 rounded-lg text-white flex items-center justify-center w-full">
+       <div className=" bg-black-ooink py-4 mt-8 px-4 rounded-lg text-disabled-ooink flex items-center justify-center w-full">
     Generate code
     <Image src="/upload-disabled.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </div>

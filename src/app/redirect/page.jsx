@@ -31,21 +31,21 @@ function Redirect({ searchParams }) {
     getData();
   }, [code]);
 
-  // useEffect(() => {
-  //   if (seconds === 0 && data) {
-  //     let webLink = data.webLink;
-  //     if (!webLink.startsWith('http://') && !webLink.startsWith('https://')) {
-  //       webLink = 'http://' + webLink;
-  //     }
-  //     window.open(webLink);
-  //     router.push('/')
-  //   } else if (seconds > 0) {
-  //     const timerId = setTimeout(() => {
-  //       setSeconds(seconds - 1);
-  //     }, 1000);
-  //     return () => clearTimeout(timerId);
-  //   }
-  // }, [seconds, data, router]);
+  useEffect(() => {
+    if (seconds === 0 && data) {
+      let webLink = data.webLink;
+      if (!webLink.startsWith('http://') && !webLink.startsWith('https://')) {
+        webLink = 'http://' + webLink;
+      }
+      window.open(webLink);
+      router.push('/')
+    } else if (seconds > 0) {
+      const timerId = setTimeout(() => {
+        setSeconds(seconds - 1);
+      }, 1000);
+      return () => clearTimeout(timerId);
+    }
+  }, [seconds, data, router]);
 
   return (
     <div className='text-white redirect'>
