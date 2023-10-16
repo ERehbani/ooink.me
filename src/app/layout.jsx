@@ -17,8 +17,8 @@ export default function RootLayout({ children }) {
       <Head>
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7210881069005858"
-          crossOrigin="anonymous"></script>
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8146840112267023"
+          crossorigin="anonymous"></script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body className={inter.className}>
