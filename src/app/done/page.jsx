@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
 import CircleBg from 'src/components/circle-bg/page'
+import './globals.css'
 
 function Done({searchParams}) {
   const code = searchParams.params
@@ -18,7 +19,7 @@ function Done({searchParams}) {
   }
 
   return (
-    <div className='text-white flex items-center justify-center h-screen'>
+    <div className='text-white flex items-center justify-center done'>
       <CircleBg/>
      <div className='w-full max-w-xs'>
      <div className='mb-7'>

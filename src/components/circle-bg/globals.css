@@ -1,5 +1,6 @@
 .circle-bg {
     position: absolute;
+
     top: -470px;
     border-radius: 100%;
     z-index: -10;

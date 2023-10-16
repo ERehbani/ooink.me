@@ -1,12 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-    background-color: black;
-}
-
-.app {
+.done {
     @media (max-width: 740px) {
         height: 94vh;
     }

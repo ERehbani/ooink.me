@@ -8,6 +8,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import CircleBg from 'src/components/circle-bg/page';
+import './globals.css'
 
 function Form() {
 
@@ -118,7 +119,7 @@ function Form() {
 
 
   return (
-    <div className='flex items-center justify-center h-screen'>
+    <div className='flex items-center justify-center form'>
       <CircleBg/>
         <div className="w-full max-w-xs">
 
