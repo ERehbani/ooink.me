@@ -15,10 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8146840112267023"
-          crossorigin="anonymous"></script>
+      <meta name="google-adsense-account" content="ca-pub-8146840112267023"/>
+
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body className={inter.className}>
