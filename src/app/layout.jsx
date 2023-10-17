@@ -2,6 +2,7 @@ import Footer from "src/components/footer/page";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,16 +15,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta name="google-adsense-account" content="ca-pub-8146840112267023"/>
+        <meta name="google-adsense-account" content="ca-pub-8146840112267023" />
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-        {children}
-
-        <Footer />
-
-        <Analytics />
+        <Providers>
+          {children}
+          <Footer />
+          <Analytics />
+        </Providers>
       </body>
     </html>
   );
