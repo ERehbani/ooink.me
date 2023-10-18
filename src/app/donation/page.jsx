@@ -18,7 +18,7 @@ function Donation() {
           <h1 className="title-donation">Make a donation</h1>
           <div>
             <div className="">
-              <label htmlFor="">Select an opion</label>
+              <label htmlFor="" className='text-white'>Select an option</label>
               <Select 
               color='secondary'
         className="max-w-xs" 
