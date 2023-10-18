@@ -1,14 +1,16 @@
+"use client"
 import React from "react";
 import "./globals.css";
-import CircleBg from "src/components/circle-bg/page";
+// import CircleBg from "src/components/circle-bg/page";
 import Link from "next/link";
 import Image from "next/image";
+import { ScrollShadow } from "@nextui-org/react";
 
 function Privacy() {
   return (
     <div className="flex justify-center items-center">
       <div className="h-screen flex justify-center items-center">
-        <CircleBg />
+        {/* <CircleBg /> */}
         <div>
         <Link href='/' className='flex justify-around w-[25%] mb-6'>
   <Image src="/back.svg" alt='back' width={20} height={0}/> 
@@ -18,6 +20,7 @@ function Privacy() {
           <div>
             <div className="privacy-square">
               <div className="square-content">
+                <ScrollShadow hideScrollBar className="w-[274px] h-[424px]">
                 <h2 className="square-title">Ooink Privacy Policy</h2>
                 <i>Effective Date: October 16, 2023</i>
                 <p className="square-p">
@@ -50,6 +53,7 @@ function Privacy() {
                   of Ooink, please do not hesitate to get in touch with us at
                   hello.oink@proton.me.
                 </p>
+                </ScrollShadow>
               </div>
             </div>
           </div>

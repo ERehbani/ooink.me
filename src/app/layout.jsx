@@ -3,6 +3,9 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Providers } from "./providers";
+// import CircleBg from "src/components/circle-bg/page";
+import Image from "next/image";
+import CircleBg from "src/components/circleBg/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +24,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Providers>
+        <CircleBg />
           {children}
           <Footer />
           <Analytics />

@@ -8,17 +8,17 @@
 }
 
 .privacy-square {
-  width: 284px;
+  width: 294px;
   height: 434px;
   flex-shrink: 0;
   border-radius: 8px;
   background: #27272a;
-    overflow-x: scroll;
 }
 
 .square-content {
     color: #6d6d6d;
     margin: 15px;
+    
 }
 
 .square-title {

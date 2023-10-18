@@ -2,13 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import './globals.css'
 import Link from 'next/link'
-import CircleBg from 'src/components/circle-bg/page'
+// import CircleBg from 'src/components/circle-bg/page'
 
 
 export default function NotFound() {
   return (
     <div className='h-screen w-full flex justify-center items-center'>
-      <CircleBg/>
+      {/* <CircleBg/> */}
         <div className=''>
             <div>
             <Image src='/oops.svg' alt='404' width={268} height={0} className='mx-auto'/>

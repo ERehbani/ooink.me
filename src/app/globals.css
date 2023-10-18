@@ -44,3 +44,50 @@ padding: 20px 40px;
 justify-content: center;
 
 }
+
+/* .circle-image {
+    position: absolute;
+    top: -470px;
+    border-radius: 100%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    filter: blur(123px);
+
+    @media (max-width: 740px) {
+        width: 650px;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        content: url('../../../public/circleResponsive.svg');
+        top: -330px;
+        left: -125px;
+        filter: none;
+    }
+} */
+
+.circle.svg {
+    position: absolute;
+    top: -470px;
+    border-radius: 100%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    filter: blur(123px);
+@media (max-width: 740px) {
+        width: 550px;
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        margin: 0 auto;
+        content: url('../../public/circleResponsive.svg');
+        top: -330px;
+        filter: none;
+    }
+}

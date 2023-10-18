@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-import CircleBg from 'src/components/circle-bg/page';
+// import CircleBg from 'src/components/circle-bg/page';
 import './globals.css'
 
 function Redirect({ searchParams }) {
@@ -49,7 +49,7 @@ function Redirect({ searchParams }) {
 
   return (
     <div className='text-white redirect'>
-      <CircleBg/>
+      {/* <CircleBg/> */}
       <div>
       <div>
         <div className='h-[61.5px] bg-ooink flex justify-center'>

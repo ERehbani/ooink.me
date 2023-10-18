@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { Toaster, toast } from 'react-hot-toast'
-import CircleBg from 'src/components/circle-bg/page'
+// import CircleBg from 'src/components/circle-bg/page'
 import './globals.css'
+import CopyButton from 'src/components/copyButton/copyButton'
 
 function Done({searchParams}) {
   const code = searchParams.params
@@ -20,7 +21,7 @@ function Done({searchParams}) {
 
   return (
     <div className='text-white flex items-center justify-center done'>
-      <CircleBg/>
+      {/* <CircleBg/> */}
      <div className='w-full max-w-xs'>
      <div className='mb-7'>
         <h1 className='text-2xl font-bold'>Great Job!</h1>
@@ -35,10 +36,11 @@ function Done({searchParams}) {
           </div>
 
           <div>
-          <button onClick={() => copyToClipboard(code)}  type="submit" className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
+          {/* <button onClick={() => copyToClipboard(code)}  type="submit" className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
     <span>Copy to clipboard</span>
     <Image src="/copy.svg" alt='upload' width={17} height={0} className='ml-2'/>
-  </button>
+  </button> */}
+  <CopyButton code={code}/>
           </div>
           <div>
           <Link href='/' className=" border border-ooink py-4 mt-4 px-4 rounded-lg text-black flex items-center justify-center w-full">

@@ -12,7 +12,7 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <footer className="flex z-20 w-full p-2 border-t border-zinc-800 shadow items-center justify-between">
+      <footer className="flex w-full p-3 border-t border-zinc-800 shadow items-center justify-between bg-black">
         <div className="text-sm text-gray-500 dark:text-gray-400">
           <span>© 2023 -</span>
           <a href="/" className="hover:underline">
@@ -32,13 +32,13 @@ function Footer() {
             </Link>
           </li>
         </ul> */}
-        <Dropdown>
+        <Dropdown className="bg-[#18181B] text-gray-ooink">
           <DropdownTrigger>
             <Button variant="" className="text-gray-ooink font-medium text-sm">
               More
             </Button>
           </DropdownTrigger>
-          <DropdownMenu>
+          <DropdownMenu >
             <DropdownItem>
               <Link
                 href="/privacy-policy"

@@ -2,15 +2,17 @@
 import { useFormik } from 'formik'
 import * as Yup from "yup";
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-import CircleBg from 'src/components/circle-bg/page';
+import CircleBg from 'src/components/circleBg/page';
+import { Progress } from '@nextui-org/react';
 import './globals.css'
 
 function Form() {
+  const [loading, setLoading] = useState(false)
 
   const formik = useFormik({
     initialValues: {
@@ -33,6 +35,7 @@ function Form() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true)
     try {
       // Realiza una solicitud GET para verificar la existencia del enlace
       const getResponse = (formik.values.webLink)
@@ -64,6 +67,8 @@ function Form() {
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false) 
     }
   };
   
@@ -119,8 +124,8 @@ function Form() {
 
 
   return (
-    <div className='flex items-center justify-center form'>
-      <CircleBg/>
+    <div className='flex items-center justify-center form z-50'>
+      {/* <CircleBg/> */}
         <div className="w-full max-w-xs">
 
       <Link href='/' className='flex justify-around w-[25%] mb-6'>
@@ -168,6 +173,16 @@ function Form() {
     <Image src="/Subtract.svg" alt='upload' width={20} height={0} className='ml-2'/>
   </button>
   )}
+
+  {loading ? (
+    <Progress
+    size="sm"
+    color='primary'
+    isIndeterminate
+    aria-label="Loading..."
+    className="max-w-md bg-zinc-800 mt-2"
+  />
+  ) : null}
 
 </form>
 </div>
