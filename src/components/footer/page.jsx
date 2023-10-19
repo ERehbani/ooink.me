@@ -53,6 +53,13 @@ function Footer() {
                 Contact
               </Link>
             </DropdownItem>
+            <DropdownItem>
+              <Link
+                href="/donation"
+                className="hover:underline">
+                Donate
+              </Link>
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </footer>

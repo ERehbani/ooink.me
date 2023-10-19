@@ -40,7 +40,7 @@ function Done({searchParams}) {
     <span>Copy to clipboard</span>
     <Image src="/copy.svg" alt='upload' width={17} height={0} className='ml-2'/>
   </button> */}
-  <CopyButton code={code}/>
+          <CopyButton code={code}/>
           </div>
           <div>
           <Link href='/' className=" border border-ooink py-4 mt-4 px-4 rounded-lg text-black flex items-center justify-center w-full">
