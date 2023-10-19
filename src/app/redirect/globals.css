@@ -1,11 +1,11 @@
-.redirect {
-    @media (max-width: 740px) {
-        height: 94vh;
-    }
-    @media (max-width: 640px) {
-        height: 92vh;
-    }
-    @media (min-width: 740px) {
-        height: 93vh;
-    }
-}
+/* .redirect {
+  @media (max-width: 740px) {
+    height: 94vh;
+  }
+  @media (max-width: 640px) {
+    height: 92vh;
+  }
+  @media (min-width: 740px) {
+    height: 93vh;
+  }
+} */

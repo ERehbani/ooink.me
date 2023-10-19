@@ -123,102 +123,104 @@ function Form() {
       {/* <CircleBg/> */}
       <div className="w-full max-w-xs h-screen flex justify-center items-center">
         <div>
-        <Link href="/" className="flex justify-around w-[25%] mb-6">
-          <Image src="/back.svg" alt="back" width={20} height={0} />
-          <p className="text-ooink">Back</p>
-        </Link>
-        <h1 className="text-4xl mb-8 text-white text-left font-bold">
-          New OOINK Code
-        </h1>
+          <Link href="/" className="flex justify-around w-[25%] mb-6">
+            <Image src="/back.svg" alt="back" width={20} height={0} />
+            <p className="text-ooink">Back</p>
+          </Link>
+          <h1 className="text-4xl mb-8 text-white text-left font-bold">
+            New OOINK Code
+          </h1>
 
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="link" className="text-white mb-2 font-light flex">
-            Link for share<p className="text-red-600 ml-2">*</p>
-          </label>
-          <div className="mb-4">
-            <input
-              value={formik.values.webLink}
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
-              type="text"
-              id="webLink"
-              placeholder="http://"
-              className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"
-            />
-            {formik.touched.webLink && formik.errors.webLink ? (
-              <div
-                className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
-                role="alert">
-                <p className="font-bold">Error: </p>
-                <p>{formik.errors.webLink}</p>
-              </div>
-            ) : null}
-          </div>
-          <label htmlFor="username" className="text-white mb-2 font-light flex">
-            Your name<p className="text-red-600 ml-2">*</p>
-          </label>
-          <div className="mb-4">
-            <input
-              value={formik.values.userName}
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
-              type="text"
-              id="userName"
-              placeholder="Your name"
-              className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"
-            />
-            {formik.touched.userName && formik.errors.userName ? (
-              <div
-                className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
-                role="alert">
-                <p className="font-bold">Error: </p>
-                <p>{formik.errors.userName}</p>
-              </div>
-            ) : null}
-          </div>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="link" className="text-white mb-2 font-light flex">
+              Link for share<p className="text-red-600 ml-2">*</p>
+            </label>
+            <div className="mb-4">
+              <input
+                value={formik.values.webLink}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                type="text"
+                id="webLink"
+                placeholder="http://"
+                className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"
+              />
+              {formik.touched.webLink && formik.errors.webLink ? (
+                <div
+                  className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
+                  role="alert">
+                  <p className="font-bold">Error: </p>
+                  <p>{formik.errors.webLink}</p>
+                </div>
+              ) : null}
+            </div>
+            <label
+              htmlFor="username"
+              className="text-white mb-2 font-light flex">
+              Your name<p className="text-red-600 ml-2">*</p>
+            </label>
+            <div className="mb-4">
+              <input
+                value={formik.values.userName}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                type="text"
+                id="userName"
+                placeholder="Your name"
+                className="py-4 px-4 rounded-lg focus:outline-none w-full text-white bg-zinc-800"
+              />
+              {formik.touched.userName && formik.errors.userName ? (
+                <div
+                  className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5"
+                  role="alert">
+                  <p className="font-bold">Error: </p>
+                  <p>{formik.errors.userName}</p>
+                </div>
+              ) : null}
+            </div>
 
-          {(formik.touched.urlProfile && formik.errors.urlProfile) ||
-          (formik.touched.webLink && formik.errors.webLink) ||
-          (formik.touched.userName && formik.errors.userName) ||
-          !formik.values.webLink.length ||
-          !formik.values.userName ? (
-            <div>
-              <div className=" bg-black-ooink py-4 mt-8 px-4 rounded-lg text-disabled-ooink flex items-center justify-center w-full">
-                Generate code
+            {(formik.touched.urlProfile && formik.errors.urlProfile) ||
+            (formik.touched.webLink && formik.errors.webLink) ||
+            (formik.touched.userName && formik.errors.userName) ||
+            !formik.values.webLink.length ||
+            !formik.values.userName ? (
+              <div>
+                <div className=" bg-black-ooink py-4 mt-8 px-4 rounded-lg text-disabled-ooink flex items-center justify-center w-full">
+                  Generate code
+                  <Image
+                    src="/upload-disabled.svg"
+                    alt="upload"
+                    width={20}
+                    height={0}
+                    className="ml-2"
+                  />
+                </div>
+              </div>
+            ) : (
+              <button
+                type="submit"
+                className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
+                <span>Generate code</span>
                 <Image
-                  src="/upload-disabled.svg"
+                  src="/Subtract.svg"
                   alt="upload"
                   width={20}
                   height={0}
                   className="ml-2"
                 />
-              </div>
-            </div>
-          ) : (
-            <button
-              type="submit"
-              className=" bg-ooink py-4 mt-8 px-4 rounded-lg text-black flex items-center justify-center w-full">
-              <span>Generate code</span>
-              <Image
-                src="/Subtract.svg"
-                alt="upload"
-                width={20}
-                height={0}
-                className="ml-2"
-              />
-            </button>
-          )}
+              </button>
+            )}
 
-          {loading ? (
-            <Progress
-              size="sm"
-              color="primary"
-              isIndeterminate
-              aria-label="Loading..."
-              className="max-w-md bg-zinc-800 mt-2"
-            />
-          ) : null}
-        </form>
+            {loading ? (
+              <Progress
+                size="sm"
+                color="primary"
+                isIndeterminate
+                aria-label="Loading..."
+                className="max-w-md bg-zinc-800 mt-2"
+              />
+            ) : null}
+          </form>
         </div>
       </div>
       <Toaster position="top-center" reverseOrder={false} />

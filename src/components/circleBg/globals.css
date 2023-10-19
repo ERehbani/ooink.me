@@ -1,23 +1,26 @@
 .circle-svg {
-    position: absolute;
-    top: -470px;
-    border-radius: 100%;
-    left: 0;
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    display: flex;
-    justify-content: center;
-    filter: blur(123px);
-    pointer-events: none;
+  position: absolute;
+  top: -470px;
+  border-radius: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  filter: blur(123px);
+  pointer-events: none;
+}
+
 @media (max-width: 740px) {
-        width: 550px;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        margin: 0 auto;
-        content: url('../../../public/circleResponsive.svg');
-        top: -330px;
-        filter: none;
-    }
+  .circle-svg {
+    width: 550px;
+    position: fixed;
+    justify-content: center;
+    margin: 0 auto;
+    top: -330px;
+    filter: none;
+    left: 50%;
+    transform: translateX(-50%);
+    content: url("../../../public/circleResponsive.svg");
+  }
 }

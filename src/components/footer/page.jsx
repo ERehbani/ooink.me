@@ -11,8 +11,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 function Footer() {
-
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <div className="mt-auto">

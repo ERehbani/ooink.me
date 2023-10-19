@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Providers>
-        <CircleBg />
+          <CircleBg />
           {children}
           <Footer />
           <Analytics />
