@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className='app flex items-center justify-center h-screen'>
-     <div className='flex justify-center items-center my-auto'>
+     <div className='flex justify-center items-center my-auto h-screen'>
       <div className="w-full max-w-xs">
         <Image src="/ooink_logo.svg" alt="Imagen SVG" width={200} height={0} className="mx-auto mb-8 pointer-events-none"/>
         <div className="flex justify-center items-center mb-4">

@@ -45,7 +45,7 @@ function Donation() {
           <Link href='/'>
             <div className='flex justify-around w-[25%] mb-6'>
               <Image src="/back.svg" alt='back' width={20} height={20}/> 
-              <p className='text-ooink'>Back</p>
+              <p className='text-ooink ml-2'>Back</p>
             </div>
           </Link>
           <h1 className="title-donation">Make a donation</h1>

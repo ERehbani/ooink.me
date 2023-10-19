@@ -7,11 +7,15 @@ import {
   DropdownTrigger
 } from "@nextui-org/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function Footer() {
+
+  const router = useRouter()
+
   return (
-    <div>
+    <div className="mt-auto">
       <footer className="flex w-full p-3 border-t border-zinc-800 shadow items-center justify-between bg-black">
         <div className="text-sm text-gray-500 dark:text-gray-400">
           <span>© 2023 -</span>
@@ -38,27 +42,31 @@ function Footer() {
               More
             </Button>
           </DropdownTrigger>
-          <DropdownMenu >
-            <DropdownItem>
-              <Link
-                href="/privacy-policy"
-                className="mr-4 hover:underline md:mr-6 input">
-                Privacy Policy
-              </Link>
+          <DropdownMenu>
+            <DropdownItem
+              onClick={() => router.push("/privacy-policy")}
+              className="mr-4 hover:underline md:mr-6 input">
+              Privacy Policy
             </DropdownItem>
-            <DropdownItem>
-              <Link
+
+            {/* <Link
                 href="mailto:hello.ooink@proton.me"
                 className="hover:underline">
+           <div>
+           <DropdownItem>
                 Contact
-              </Link>
             </DropdownItem>
-            <DropdownItem>
-              <Link
-                href="/donation"
-                className="hover:underline">
-                Donate
-              </Link>
+           </div>
+              </Link> */}
+            <DropdownItem
+              onClick={() => router.push("mailto:hello.ooink@proton.me")}
+              className="mr-4 hover:underline md:mr-6 input">
+              Contact
+            </DropdownItem>
+            <DropdownItem
+              onClick={() => router.push("/donation")}
+              className="mr-4 hover:underline md:mr-6 input">
+              Donate
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>

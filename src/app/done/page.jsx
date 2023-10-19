@@ -20,7 +20,7 @@ function Done({searchParams}) {
   }
 
   return (
-    <div className='text-white flex items-center justify-center done'>
+    <div className='text-white flex items-center justify-center done h-screen'>
       {/* <CircleBg/> */}
      <div className='w-full max-w-xs'>
      <div className='mb-7'>

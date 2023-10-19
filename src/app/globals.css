@@ -6,7 +6,7 @@ body {
     background-color: black;
 }
 
-.app {
+/* .app {
     @media (max-width: 740px) {
         height: 94vh;
     }
@@ -16,7 +16,7 @@ body {
     @media (min-width: 740px) {
         height: 93vh;
     }
-}
+} */
 
 .text-notfound {
 color: #8DA3AF;
@@ -75,19 +75,16 @@ justify-content: center;
     border-radius: 100%;
     left: 0; 
     right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
     display: flex;
-    justify-content: center;
+    margin: auto;
     filter: blur(123px);
-@media (max-width: 740px) {
-        width: 550px;
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        margin: 0 auto;
-        content: url('../../public/circleResponsive.svg');
-        top: -330px;
-        filter: none;
+    @media (max-width: 740px) {
+            content: url('../../public/circleResponsive.svg');
+            width: 550px;
+            display: flex;
+            position: absolute;
+            margin: auto;
+            top: -330px;
+            filter: none;
     }
 }
