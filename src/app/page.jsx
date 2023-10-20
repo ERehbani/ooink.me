@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -27,7 +27,7 @@ export default function Home() {
 
       if (res.ok) {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         if (data.id) {
           router.push(`/redirect?params=${linkCode}`);
           setInfo(data);
@@ -35,7 +35,7 @@ export default function Home() {
           toast.error("This code doesn't exist");
         }
       } else {
-        console.log("Error with fetch request");
+        // console.log("Error with fetch request");
         toast.error("An error occurred while fetching the link");
       }
     } catch (error) {
@@ -45,6 +45,10 @@ export default function Home() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+
+  }, [])
 
   return (
     <div className="app flex items-center justify-center h-screen">

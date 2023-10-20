@@ -15,7 +15,7 @@ export async function GET(req) {
 
     //console.log(JSON.stringify(data));
     if (data) {
-      console.log(JSON.stringify(data));
+      // console.log(JSON.stringify(data));
       return new NextResponse(JSON.stringify(data));
     } else {
       return new NextResponse({ error: "Código no encontrado" });

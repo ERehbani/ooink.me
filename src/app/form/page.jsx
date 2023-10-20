@@ -40,7 +40,7 @@ function Form() {
 
       // Verifica si la respuesta tiene un código de estado 200 y contenido válido
       if (isValidContent(getResponse)) {
-        console.log("El enlace es válido y existe");
+        // console.log("El enlace es válido y existe");
         const res = await fetch("/api", {
           method: "POST",
           body: JSON.stringify({
@@ -55,7 +55,7 @@ function Form() {
 
         if (res.ok) {
           const data = await res.json();
-          console.log(data);
+          // console.log(data);
           router.push(`/done?params=${data.code}`);
         } else {
           console.error("Error creando tarea:", res.statusText);

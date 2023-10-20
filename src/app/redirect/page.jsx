@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import "./globals.css";
 
 function Redirect({ searchParams }) {
-  console.log(searchParams);
+  // console.log(searchParams);
   const [data, setData] = useState(null);
   const [seconds, setSeconds] = useState(3);
   const code = searchParams.params;
@@ -25,7 +25,7 @@ function Redirect({ searchParams }) {
         const data = await res.json();
         setData(data);
       } else {
-        console.log("Error:", res.status);
+        // console.log("Error:", res.status);
       }
     };
     getData();

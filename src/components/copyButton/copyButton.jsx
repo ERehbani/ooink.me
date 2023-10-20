@@ -8,7 +8,7 @@ function CopyButton({ code }) {
       await navigator.clipboard.writeText(text);
       toast.success("Copied to clipboard!");
     } catch (error) {
-      console.log("Error al copiar el texto", error);
+      // console.log("Error al copiar el texto", error);
     }
   };
 
