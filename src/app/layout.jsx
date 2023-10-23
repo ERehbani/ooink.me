@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="google-adsense-account" content="ca-pub-8146840112267023" />
         <meta property="og:image" content="https://i.imgur.com/M8nzV2Z.png"></meta>
-        <meta property="og:title" content="Ooink"></meta>
-        <meta property="og:description" content="Hide and share your links"></meta>
+        <meta property="og:title" content="Ooink | Hide and share your links"></meta>
+        <meta property="og:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
         <meta property="twitter:image" content="https://i.imgur.com/M8nzV2Z.png"></meta>
-        <meta property="twitter:title" content="Ooink"></meta>
-        <meta property="twitter:description" content="Hide and share your links"></meta>
+        <meta property="twitter:title" content="Ooink | Hide and share your links"></meta>
+        <meta property="twitter:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
