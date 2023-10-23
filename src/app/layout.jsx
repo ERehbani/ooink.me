@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta property="twitter:image" content="https://i.imgur.com/M8nzV2Z.png"></meta>
         <meta property="twitter:title" content="Ooink | Hide and share your links"></meta>
         <meta property="twitter:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
-
+        <meta name="theme-color" content="#FF78A9"></meta>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
