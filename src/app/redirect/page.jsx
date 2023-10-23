@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 // import CircleBg from 'src/components/circle-bg/page';
 import "./globals.css";
+import Link from "next/link";
 
 function Redirect({ searchParams }) {
   // console.log(searchParams);
@@ -67,7 +68,13 @@ function Redirect({ searchParams }) {
             </h2>
           </div>
 
-          <div className="border border-dotted max-w-xs flex mx-auto my-20 h-56 max-md:my-10"></div>
+          {/* <div className="border border-dotted max-w-xs flex mx-auto my-20 h-56 max-md:my-10"> */}
+           <div className="flex justify-center my-10">
+           <Link href="mailto:hello.ooink@proton.me">
+           <Image src="/AdBox01.png" alt="pigAd" width={300} height={0}/>
+           </Link>
+           </div>
+          {/* </div> */}
 
           <div className="w-full max-w-xs flex mx-auto my-0">
             <div className="flex border border-gray-border-ooink bg-gray-dark-ooink rounded-lg">
