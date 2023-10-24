@@ -20,10 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-8146840112267023" />
-        <meta property="og:image" content="https://i.imgur.com/M8nzV2Z.png"></meta>
+        <meta property="og:image" content="https://imgur.com/Ft1YGVw.png"></meta>
         <meta property="og:title" content="Ooink | Hide and share your links"></meta>
         <meta property="og:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
-        <meta property="twitter:image" content="https://i.imgur.com/M8nzV2Z.png"></meta>
+        <meta property="twitter:image" content="https://imgur.com/Ft1YGVw.png"></meta>
         <meta property="twitter:title" content="Ooink | Hide and share your links"></meta>
         <meta property="twitter:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
         <meta name="theme-color" content="#FF78A9"/>
