@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <meta name="google-adsense-account" content="ca-pub-8146840112267023" />
         <meta property="og:image" content="https://imgur.com/Ft1YGVw.png"></meta>
         <meta property="og:image:width" content="1200"></meta>
-        <meta property="og:image:height" content="642"></meta>
+        <meta property="og:image:height" content="630"></meta>
         <meta property="og:title" content="Ooink | Hide and share your links"></meta>
         <meta property="og:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
         <meta property="twitter:image" content="https://imgur.com/Ft1YGVw.png"></meta>
