@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
         <meta property="twitter:image" content="https://imgur.com/Ft1YGVw.png"></meta>
         <meta property="twitter:title" content="Ooink | Hide and share your links"></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:description" content="Ooink: Share links discreetly using unique codes. Bypass link sharing restrictions effortlessly."></meta>
         <meta name="theme-color" content="#FF78A9"/>
         <link rel="icon" href="/favicon.ico" sizes="any" />
